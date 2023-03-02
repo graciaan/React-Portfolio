@@ -14,3 +14,5 @@ const aboutMe = () => {
 }
 
 export default aboutMe;
+
+//need to add photo of myself and styling
