@@ -1,25 +1,43 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState, useEffect } from 'react';
+import Header from './header';
+import Footer from './footer';
+import AboutMe from './aboutMe';
+import Resume from './resume';
+import Portfolio from './portfolio';
+import Contact from './contact';
 
+export default function PortfolioContainer() {
 
-function Navigation() {
-  return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#aboutMe">Andrew Gracia</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#aboutMe">About Me</Nav.Link>
-            <Nav.Link href="#contactMe">Contact Me</Nav.Link>
-            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-            <Nav.Link href="#resume">Resume</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+    const portfolioStyle = {
+        padding: "20px",
+    }
+    const [currentPage, setCurrentPage] = useState('About');
+
+    useEffect(() => {
+        document.title = `${currentPage}`;
+    });
+
+    const renderPage = () => {
+        if (currentPage === 'Portfolio') {
+            return <Portfolio />;
+        }
+        if (currentPage === 'Contact') {
+            return <Contact />;
+        }
+        if (currentPage === 'Resume') {
+            return <Resume />;
+        }
+        return <AboutMe />;
+    };
+
+    const handlePageChange = (page) => setCurrentPage(page);
+
+    return (
+        <div style={portfolioStyle}>
+            
+            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+            {renderPage()}
+            <Footer />
+        </div>
+    );
 }
-
-export default Navigation;

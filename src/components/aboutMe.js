@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const aboutMe = () => {
+const AboutMe = () => {
   return (
     <div>
       <p>
@@ -13,6 +13,6 @@ const aboutMe = () => {
   )
 }
 
-export default aboutMe;
+export default AboutMe;
 
 //need to add photo of myself and styling
