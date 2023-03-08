@@ -31,7 +31,7 @@ return (
       <li>
         Node.js
       </li>
-      <h3>My Personal Skills</h3>
+    <h3>My Personal Skills</h3>
       <li>
         Created Problem Solver
       </li>
