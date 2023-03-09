@@ -12,7 +12,7 @@ const AboutMe = () => {
       <img src={myPic} alt="Photo of Andrew Gracia on a ferris wheel in Seattle, WA"></img>
     </div>
   )
-}
+};
 
 export default AboutMe;
 
