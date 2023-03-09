@@ -8,9 +8,6 @@ import Contact from './contact';
 
 export default function PortfolioContainer() {
 
-    const portfolioStyle = {
-        padding: "20px",
-    }
     const [currentPage, setCurrentPage] = useState('About');
 
     useEffect(() => {
@@ -33,7 +30,7 @@ export default function PortfolioContainer() {
     const handlePageChange = (page) => setCurrentPage(page);
 
     return (
-        <div style={portfolioStyle}>
+        <div>
             
             <Header currentPage={currentPage} handlePageChange={handlePageChange} />
             {renderPage()}
