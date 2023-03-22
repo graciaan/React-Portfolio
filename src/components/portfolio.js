@@ -3,8 +3,8 @@ import secretSauce from './assets/secretsauce.png'
 import mongooseapi from './assets/mongooseapi.png'
 import texteditor from './assets/jate.png'
 import movieGenerator from './assets/moviegenerator.png'
-import readme from './assets/README.png'
 import notetaker from './assets/notetaker.png'
+import M3 from './assets/M3.png'
 
 function Portfolio({ handlePageChange }) {
 
@@ -39,7 +39,7 @@ function Portfolio({ handlePageChange }) {
       <div>
         <div>
           <h4>
-            Secret Sauce
+            Just Another Text Editor
           </h4>
           <img src={texteditor} alt="Just Another Text Editor Screenshot"></img>
           <p>An Online Text Editor</p>
@@ -63,11 +63,12 @@ function Portfolio({ handlePageChange }) {
       <div>
         <div>
           <h4>
-            ReadME Generator
+            Match My Mood
           </h4>
-          <img src={readme} alt="screenshot of readMe Generator"></img>
-          <p>Generator for ReadME's</p>
-                <a href="https://github.com/graciaan/README-GENERATOR" target="_blank" onClick={() => handlePageChange('readme')}>GitHub</a>
+          <img src={M3} alt="screenshot of Match My Mood site"></img>
+          <p>Application to help you find songs that match your mood!</p>
+          <a href="https://salty-fjord-43236.herokuapp.com/" target="_blank" onClick={() => handlePageChange('M3')}>View App</a>
+                <a href="https://github.com/bobascript/Match-My-Mood" target="_blank" onClick={() => handlePageChange('M3')}>GitHub</a>
         </div>
       </div>
 
