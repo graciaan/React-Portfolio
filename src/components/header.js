@@ -1,15 +1,16 @@
 import React from "react";
-
+import 'bootstrap/dist/css/bootstrap.css';
+import '../styles/header.css'
 
 function Header({ currentPage, handlePageChange }) {
 
 return (
   <nav className="navbar navbar-expand-lg navbar-light"  id="navbar">
-      <a className="navbar-brand">Andrew Gracia</a>
+      <a className="brand navbar-brand">Andrew Gracia</a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
+      <div className="nav1 collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
               <li className="nav-item">
                   <a className={currentPage === 'About' ? 'nav-link active' : 'nav-link'} href="#about"

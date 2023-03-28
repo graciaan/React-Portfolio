@@ -1,12 +1,14 @@
 import React from 'react';
+import "../styles/footer.css"
+
 
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className='footer'>
         <p>
-          Created by Andrew Gracia.
-          <a href='https://github.com/graciaan'>Github Page</a>
+          Created by Andrew Gracia. <br/>
+          <a target={{}} href="https://www.github.com/graciaan"><i className="fab fa-github fa-3x"/></a>
         </p>
       </div>
     </footer>
